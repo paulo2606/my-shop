@@ -44,10 +44,10 @@
                     <td><?= $row['email']; ?></td>
                     <td><?= $row['phone']; ?></td>
                     <td><?= $row['address']; ?></td>
-                    <td><?= $row['created_at']; ?></td>
+                    <td><?= date('m-d-Y', strtotime($row['created_at'])); ?></td>
                     <td>
-                        <a href="" class="btn btn-primary">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
+                        <a href="update-client.php?id=<?= $row['id']?>" class="btn btn-primary">Edit</a>
+                        <a href="delete.php?id=<?= $row['id']?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php  } ?>
